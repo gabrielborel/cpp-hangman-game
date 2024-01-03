@@ -10,5 +10,6 @@ bool check_loss_condition(
         std::cout << "You lost the game! The secret word were " << secret_word << std::endl;
         return true;
     }
+
     return false;
 }
