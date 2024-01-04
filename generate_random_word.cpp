@@ -29,6 +29,7 @@ std::string generate_random_word()
 
 	file.close();
 
+	// better way to generate a random number on C+11 and above
 	std::random_device rd;
 	std::mt19937 gen(rd());
 	std::uniform_int_distribution<int> distribution(0, words.size() - 1);

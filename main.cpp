@@ -8,7 +8,7 @@
 #include "print_secret_word.hpp"
 #include "print_wrong_guesses.hpp"
 
-const int ATTEMPTS_LIMIT = 6;
+constexpr int ATTEMPTS_LIMIT = 6;
 std::map<char, bool> secret_word_guessed_letters;
 std::vector<char> wrong_guesses;
 
@@ -27,6 +27,6 @@ int main()
 		print_word(secret_word, secret_word_guessed_letters);
 		print_wrong_guesses(wrong_guesses);
 
-		capture_guess(secret_word, &wrong_guesses, &secret_word_guessed_letters);
+		capture_guess(secret_word, wrong_guesses, secret_word_guessed_letters);
 	}
 }

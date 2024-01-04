@@ -1,5 +1,10 @@
+#ifndef CHECK_LOSS_CONDITION_HPP
+#define CHECK_LOSS_CONDITION_HPP
+
 #include <string>
 #include <vector>
 #include <iostream>
 
 bool check_loss_condition(const std::string& secret_word, const std::vector<char>& wrong_guesses, int ATTEMPTS_LIMIT);
+
+#endif

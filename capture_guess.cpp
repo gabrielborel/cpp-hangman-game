@@ -4,8 +4,8 @@
 
 void capture_guess(
     const std::string &secret_word,
-    std::vector<char> *wrong_guesses,
-    std::map<char, bool> *secret_word_guessed_letters
+    std::vector<char> &wrong_guesses,
+    std::map<char, bool> &secret_word_guessed_letters
 ) {
     std::cout << "Type a letter: ";
     char letter;
@@ -13,7 +13,7 @@ void capture_guess(
     std::cout << std::endl;
 
     if (check_letter_exists_on_secret_word(letter, secret_word))
-        (*secret_word_guessed_letters)[letter] = true;
+        secret_word_guessed_letters[letter] = true;
     else
-        (*wrong_guesses).push_back(letter);
+        wrong_guesses.push_back(letter);
 }
